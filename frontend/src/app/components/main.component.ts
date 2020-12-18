@@ -40,6 +40,7 @@ export class MainComponent implements OnInit {
 
 	clear() {
 		this.imagePath = '/assets/cactus.png'
+		this.insertForm.reset()
 	}
 
 	share() {
@@ -64,6 +65,10 @@ export class MainComponent implements OnInit {
 		this.dailySvc.postDaily(formData)
 		.then((result)=>{
 			console.log(result)
+			this.clear()
+		})
+		.catch((e)=>{
+			console.log(e)
 		})
 	}
 }

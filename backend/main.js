@@ -185,17 +185,7 @@ app.post('/daily',upload.single('upload'), (req, resp)=>{
     })
 })
 
-
 app.use(express.static(__dirname + '/frontend'))
-
-
-
-
-
-
-
-
-
 
 //test ping of my sql and mongo
 const p0 = (async () => {
